@@ -37,7 +37,6 @@ def main(event, context):
     end_date = now.isoformat("T") + "Z"
 
     outfileName = "jc_directoryinsights_" + start_date + "_" + end_date + ".json"
-    # outfileName = "jc_directoryinsights_" + start_date + "_" + end_dat
 
     url = "https://api.jumpcloud.com/insights/directory/v1/events"
 
@@ -99,8 +98,6 @@ def main(event, context):
         responseBody = json.loads(response.text)
         data = data + responseBody
     try:    
-        # f = open("/tmp/" + outfileName, "w")
-        # f.write(json.dumps(data, indent=2).encode("UTF-8"))
         with open("/tmp/" + outfileName, 'w') as f:
             json.dump(data, f)
     except Exception as e:
