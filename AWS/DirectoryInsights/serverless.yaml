@@ -112,7 +112,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: get-jcdirectoryinsights.zip
-      Handler: get-jcdirectoryinsights.jc_directoryinsights
+      Handler: get-jcdirectoryinsights.main
       MemorySize: 192
       Timeout: 180
       Runtime: python3.7
